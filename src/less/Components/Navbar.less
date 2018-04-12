@@ -1,0 +1,18 @@
+@import "../Bootstrapping/Variables";
+@import "../Bootstrapping/Mixins";
+
+.navbar {
+  height: @bar-height;
+  line-height: @bar-height;
+  //background-color: @main-color;
+  //color: @white-color;
+  background-color: @white-color;
+  color: @first-level-color;
+  border-bottom: 1px solid @light-border-color;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}

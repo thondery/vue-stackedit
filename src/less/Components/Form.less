@@ -1,0 +1,202 @@
+@import "../Bootstrapping/Variables";
+@import "../Bootstrapping/Mixins";
+
+.input {
+  width: 165px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid @border-color;
+  border-radius: @border-radius;
+  font-size: @small-font;
+  letter-spacing: 1px;
+  padding-left: 10px;
+  background-color: transparent;
+  transition: border .1s linear, background-color .1s linear;
+
+  &:focus {
+    color: @first-level-color;
+    border-color: @blue-color;
+  }
+
+  &.auto {
+    width: auto;
+    min-width: 165px;
+  }
+}
+
+.input-readonly {
+  padding-left: 10px;
+  border: none;
+}
+
+.textarea {
+  transition: border .1s linear, background-color .1s linear;
+
+  &:focus {
+    border-color: @blue-color;
+  }
+}
+
+.select {
+  border: 1px solid @border-color;
+  min-width: 165px;
+  height: 30px;
+}
+
+.label {
+  font-size: @small-font;
+  white-space: nowrap;
+}
+
+.form-s {
+  font-size: @small-font;
+
+  .input-readonly,
+  .input,
+  .select {
+    width: 165px;
+  }
+
+  .input.auto-width {
+    width: auto;
+    min-width: 165px;
+  }
+
+  .btn-submit-wrap {
+    display: flex;
+    align-items: center;
+
+    .vue-loading {
+      margin-left: 12px;
+    }
+  }
+
+  > .row,
+  > .row-inline {
+    > .cell {
+      label {
+        margin-bottom: 5px;
+      }
+    }
+
+    > .cell-h {
+      label {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.form {
+  font-size: @small-font;
+
+  >.row {
+    display: flex;
+    margin-bottom: 20px;
+
+    .input-readonly,
+    .input,
+    .select {
+      width: 165px;
+    }
+
+    .input.auto-width {
+      width: auto;
+      min-width: 165px;
+    }
+
+    >.cell {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 5px;
+      }
+    }
+
+    >.cell-h {
+      flex-direction: row;
+      align-items: center;
+
+      label {
+        margin-bottom: 0;
+        margin-right: 5px;
+      }
+
+      .vue-loading {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  >.row-inline {
+    .cell+.cell {
+      margin-left: 80px;
+    }
+    .cell {
+      flex: none;
+    }
+  }
+
+  >.row-submit {
+    position: relative;
+    justify-content: center;
+
+    .vue-loading {
+      position: absolute;
+      top: 3px;
+      left: 50%;
+      transform: translateX(50px);
+    }
+  }
+
+  >.row-submit-left {
+    align-items: center;
+
+    .vue-loading {
+      margin-left: 12px;
+    }
+  }
+
+  .btn-submit-wrap {
+    display: flex;
+    align-items: center;
+
+    .vue-loading {
+      margin-left: 12px;
+    }
+  }
+}
+
+.inline-form {
+  position: relative;
+  padding: 10px;
+  border: 1px solid @border-color;
+  background-color: @bg-color;
+
+  > .icon-close {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+
+    &:hover {
+      color: @pink-color;
+    }
+  }
+
+  .input {
+    background-color: @white-color;
+  }
+  .input[readonly] {
+    background-color: @bg-color;
+  }
+}
+
+.submit-button {
+  > .vue-loading {
+    margin-left: 10px;
+  }
+}

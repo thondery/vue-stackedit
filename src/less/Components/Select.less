@@ -1,0 +1,55 @@
+@import "../Bootstrapping/Variables";
+
+.select-svg {
+  position: relative;
+  width: 100px;
+  height: 45px;
+  > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    color: @first-level-color;
+    background: transparent;
+    z-index: 20;
+    cursor: pointer;
+  }
+  svg {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 14px;
+    height: 9px;
+    use {
+      color: #333;
+    }
+  }
+}
+
+.dropdown {
+  .shadow-light;
+  position: absolute;
+  background-color: @white-color;
+  padding: 10px 0;
+  display: none;
+  z-index: 10;
+
+  .btn-text {
+    display: block;
+    width: 100%;
+    min-width: 160px;
+    text-align: left;
+    white-space: nowrap;
+    padding: 0 20px;
+
+    &:hover {
+      color: @first-level-color;
+      background: @bg-color;
+    }
+  }
+}
